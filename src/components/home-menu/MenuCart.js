@@ -19,7 +19,7 @@ const MenuCart = ({ img, productName, url }) => {
           />
         </Details>
         <CartImgStyled>
-          <img src={img} alt={`${productName} photo`} />
+          <img src={img} alt="" />
         </CartImgStyled>
       </CartBodyStyled>
     </MenuCartStyled>

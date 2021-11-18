@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const FooterSection = styled.div`
   padding: 2rem 0;
@@ -20,15 +19,7 @@ export const TopSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  /* @media screen and (max-width: 1200px) {
-      padding: 0 2rem;
-    } */
-
   @media screen and (max-width: 768px) {
-    display: block;
-  }
-
-  @media screen and (max-width: 395px) {
     display: block;
   }
 `;
@@ -43,8 +34,6 @@ export const FooterMenu = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: start;
     margin: 32px 0;
-    /* grid-template-columns: repeat(auto-fit, minmax(60px,1fr)); */
-    /* width: 80%; */
   }
 
   @media screen and (max-width: 395px) {
@@ -87,16 +76,9 @@ export const Icons = styled.div`
       color: #d87d4a;
     }
   }
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 395px) {
-  }
 `;
 
 export const CopyrightSection = styled.div`
-  /* opacity: 0.5; */
   font-size: 15px;
   margin-top: 56px;
 
@@ -104,18 +86,17 @@ export const CopyrightSection = styled.div`
     display: none;
   }
 
+  p {
+    opacity: 0.5;
+  }
+
   @media screen and (max-width: 768px) {
     margin-top: 70px;
-    /* margin-bottom: 45px; */
     display: flex;
     justify-content: space-between;
 
-    p {
-      opacity: 0.5;
-    }
-
     > div {
-      display: block;
+      display: flex;
     }
   }
 
@@ -124,6 +105,10 @@ export const CopyrightSection = styled.div`
 
     p {
       margin: 48px 0;
+    }
+
+    div {
+      display: block;
     }
   }
 `;

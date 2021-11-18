@@ -6,7 +6,7 @@ export const MenuStyled = styled.div`
   gap: 6rem 1rem;
   width: 75%;
   text-align: center;
-  margin: 250px auto;
+  margin: 250px auto 0;
   align-items: center;
   justify-content: space-between;
 

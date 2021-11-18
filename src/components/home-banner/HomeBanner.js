@@ -11,7 +11,9 @@ const HomeBanner = () => {
     <HomeBannerStyled>
       <p>New Product</p>
       <ProductTitle>
-        <p>XX99 Mark || <br /> Headphones</p>
+        <p>
+          XX99 Mark || <br /> Headphones
+        </p>
       </ProductTitle>
       <ProductDescription>
         <p>
@@ -19,7 +21,7 @@ const HomeBanner = () => {
           for the passionate music enthusiast.
         </p>
       </ProductDescription>
-      <Button to="#">See Product</Button>
+      <Button to="/headphones/xx99two">See Product</Button>
     </HomeBannerStyled>
   );
 };

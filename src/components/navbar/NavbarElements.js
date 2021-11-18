@@ -19,6 +19,7 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 10000;
 
     @media screen and (max-width: 395px) {
       margin-left: 15px;
@@ -103,11 +104,15 @@ export const NavLink = styled(Link)`
   &:hover {
     color: #d87d4a;
   }
+
+  @media screen and (max-width: 768px) {
+    margin: 20px 0;
+  }
 `;
 
 export const NavMenu = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 30px;
   justify-content: space-between;
   width: 55%;
@@ -126,7 +131,21 @@ export const NavMenu = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    z-index: 1000;
+    transform: ${(props) =>
+      props.menuOpen ? "translateX(0)" : "translateX(-100%)"};
+    transition: all 0.3s ease-in-out;
   }
 `;
 

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HomeBannerStyled = styled.div`
   /* margin: 100px auto ; */
   margin-top: 100px;
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
   color: white;
   width: 75%;
@@ -22,7 +23,7 @@ export const HomeBannerStyled = styled.div`
 
   @media screen and (max-width: 375px) {
     /* margin:0; */
-      width: 100%;
+    width: 100%;
   }
 `;
 
@@ -42,7 +43,7 @@ export const ProductTitle = styled.div`
   }
 
   @media screen and (max-width: 395px) {
-      font-size: 36px;
+    font-size: 36px;
   }
 `;
 
@@ -63,7 +64,7 @@ export const ProductDescription = styled.div`
     width: 85%;
   }
 `;
-export const Button = styled.button`
+export const Button = styled(Link)`
   background-color: #d87d4a;
   text-transform: uppercase;
   padding: 20px 30px;
@@ -71,6 +72,7 @@ export const Button = styled.button`
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 700;
+  font-size: 13px;
 
   &:hover {
     background-color: #fbaf85;

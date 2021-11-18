@@ -16,7 +16,7 @@ const Navbar = () => {
         <NavLogo to="/">
           <img src="./assets/shared/desktop/logo.svg" alt="NavLogo" />
         </NavLogo>
-        <NavMenu>
+        <NavMenu menuOpen={menuOpen}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/headphones">Headphones</NavLink>
           <NavLink to="/speakers">Speakers</NavLink>

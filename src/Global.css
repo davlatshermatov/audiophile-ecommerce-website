@@ -8,3 +8,8 @@
   border: none;
   text-decoration: none;
 }
+
+body {
+  max-width: 1400px;
+  margin: auto;
+}
