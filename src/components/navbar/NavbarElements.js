@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   margin: auto;
   border-bottom: 0.2px solid #434343;
   position: relative;
+  background: ${(props) => (props.background ? `${props.background}` : "")};
 
   .menuBtn {
     position: relative;
@@ -144,7 +145,7 @@ export const NavMenu = styled.div`
     font-size: 20px;
     z-index: 1000;
     transform: ${(props) =>
-      props.menuOpen ? "translateX(0)" : "translateX(-100%)"};
+      props.menuOpen ? "translateX(0)" : "translateX(-120%)"};
     transition: all 0.3s ease-in-out;
   }
 `;

@@ -17,7 +17,7 @@ const Earphones = () => {
       tablet: "product-yx1-earphones/tablet/image-category-page-preview.jpg",
       mobile: "product-yx1-earphones/mobile/image-category-page-preview.jpg",
     },
-    link: "",
+    link: "/earphones/yx1",
   };
 
   return (

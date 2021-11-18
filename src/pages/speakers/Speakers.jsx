@@ -18,7 +18,7 @@ const Speakers = () => {
         tablet: "product-zx9-speaker/tablet/image-category-page-preview.jpg",
         mobile: "product-zx9-speaker/mobile/image-category-page-preview.jpg",
       },
-      link: "",
+      link: "/speakers/zx9",
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const Speakers = () => {
         tablet: "product-zx7-speaker/tablet/image-category-page-preview.jpg",
         mobile: "product-zx7-speaker/mobile/image-category-page-preview.jpg",
       },
-      link: "",
+      link: "/speakers/zx7",
     },
   ];
 

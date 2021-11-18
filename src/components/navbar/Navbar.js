@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Nav, NavLink, NavLogo, NavMenu, NavBtn } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({background}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <Nav>
+      <Nav background={background}>
         <div
           className={`menuBtn ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}

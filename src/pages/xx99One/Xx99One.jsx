@@ -18,12 +18,12 @@ import {
   OtherItems,
 } from "../xx99Two/Xx99TwoStyle";
 import Navbar from "../../components/navbar/Navbar";
-import { xx59, others } from "./productData";
+import { xx99One, others } from "./productData";
 import Others from "../../components/others/Others";
 
 const Xx99MarkTwo = () => {
   const [counter, setCounter] = useState(1);
-  const [totalSum, setTotalSum] = useState(xx59.price);
+  const [totalSum, setTotalSum] = useState(xx99One.price);
 
   return (
     <>
@@ -34,23 +34,23 @@ const Xx99MarkTwo = () => {
         <Image>
           <picture>
             <source
-              srcset={`./assets/${xx59.img.mobile}`}
+              srcset={`./assets/${xx99One.img.mobile}`}
               media="(max-width: 395px)"
             />
             <source
-              srcset={`./assets/${xx59.img.tablet}`}
+              srcset={`./assets/${xx99One.img.tablet}`}
               media="(max-width: 768px)"
             />
 
-            <img srcset={`./assets/${xx59.img.desktop}`} alt="" />
+            <img srcset={`./assets/${xx99One.img.desktop}`} alt="" />
           </picture>
         </Image>
         <ProductDetails>
-          {xx59.new ? <p>new product</p> : ""}
+          {xx99One.new ? <p>new product</p> : ""}
           <ProductTitle>
-            <h1>{xx59.name}</h1>
+            <h1>{xx99One.name}</h1>
           </ProductTitle>
-          <ProductDesc>{xx59.desc}</ProductDesc>
+          <ProductDesc>{xx99One.desc}</ProductDesc>
           <Price>{`$ ${totalSum}`}</Price>
           <AddToCart>
             <Counter>
@@ -60,7 +60,7 @@ const Xx99MarkTwo = () => {
                     prevCount !== 0 ? prevCount - 1 : prevCount
                   );
                   setTotalSum((prevSum) =>
-                    prevSum !== 0 ? prevSum - xx59.price : prevSum
+                    prevSum !== 0 ? prevSum - xx99One.price : prevSum
                   );
                 }}
               >
@@ -70,7 +70,7 @@ const Xx99MarkTwo = () => {
               <button
                 onClick={() => {
                   setCounter((prevCount) => prevCount + 1);
-                  setTotalSum((prevSum) => parseInt(prevSum) + xx59.price);
+                  setTotalSum((prevSum) => parseInt(prevSum) + xx99One.price);
                 }}
               >
                 +
@@ -83,14 +83,14 @@ const Xx99MarkTwo = () => {
       <Features>
         <div>
           <h1>features</h1>
-          <p>{xx59.features}</p>
+          <p>{xx99One.features}</p>
           <br />
-          <p>{xx59.feature2}</p>
+          <p>{xx99One.feature2}</p>
         </div>
         <div>
           <h1>in the box</h1>
           <div>
-            {xx59.inTheBox.map((item) => (
+            {xx99One.inTheBox.map((item) => (
               <p>
                 <span>{`${item.amount}x`}</span> {item.name}
               </p>
@@ -101,36 +101,36 @@ const Xx99MarkTwo = () => {
       <Gallery>
         <picture className="a">
           <source
-            srcset={`./assets/${xx59.gallery.first.mobile}`}
+            srcset={`./assets/${xx99One.gallery.first.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.first.tablet}`}
+            srcset={`./assets/${xx99One.gallery.first.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.first.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99One.gallery.first.desktop}`} alt="" />
         </picture>
         <picture className="b">
           <source
-            srcset={`./assets/${xx59.gallery.second.mobile}`}
+            srcset={`./assets/${xx99One.gallery.second.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.second.tablet}`}
+            srcset={`./assets/${xx99One.gallery.second.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.second.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99One.gallery.second.desktop}`} alt="" />
         </picture>
         <picture className="c">
           <source
-            srcset={`./assets/${xx59.gallery.third.mobile}`}
+            srcset={`./assets/${xx99One.gallery.third.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.third.tablet}`}
+            srcset={`./assets/${xx99One.gallery.third.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.third.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99One.gallery.third.desktop}`} alt="" />
         </picture>
       </Gallery>
       <OtherItems>

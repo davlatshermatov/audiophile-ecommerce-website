@@ -16,14 +16,14 @@ import {
   Button,
   Counter,
   OtherItems,
-} from "../xx99Two/Xx99TwoStyle";
+} from "./Xx99TwoStyle";
 import Navbar from "../../components/navbar/Navbar";
-import { xx59, others } from "./productData";
-import Others from "../../components/others/Others";
+import { xx99, others } from "./productData";
+import Others from "../../components/others/Others"
 
 const Xx99MarkTwo = () => {
   const [counter, setCounter] = useState(1);
-  const [totalSum, setTotalSum] = useState(xx59.price);
+  const [totalSum, setTotalSum] = useState(xx99.price);
 
   return (
     <>
@@ -34,23 +34,23 @@ const Xx99MarkTwo = () => {
         <Image>
           <picture>
             <source
-              srcset={`./assets/${xx59.img.mobile}`}
+              srcset={`./assets/${xx99.img.mobile}`}
               media="(max-width: 395px)"
             />
             <source
-              srcset={`./assets/${xx59.img.tablet}`}
+              srcset={`./assets/${xx99.img.tablet}`}
               media="(max-width: 768px)"
             />
 
-            <img srcset={`./assets/${xx59.img.desktop}`} alt="" />
+            <img srcset={`./assets/${xx99.img.desktop}`} alt="" />
           </picture>
         </Image>
         <ProductDetails>
-          {xx59.new ? <p>new product</p> : ""}
+          {xx99.new ? <p>new product</p> : ""}
           <ProductTitle>
-            <h1>{xx59.name}</h1>
+            <h1>{xx99.name}</h1>
           </ProductTitle>
-          <ProductDesc>{xx59.desc}</ProductDesc>
+          <ProductDesc>{xx99.desc}</ProductDesc>
           <Price>{`$ ${totalSum}`}</Price>
           <AddToCart>
             <Counter>
@@ -60,7 +60,7 @@ const Xx99MarkTwo = () => {
                     prevCount !== 0 ? prevCount - 1 : prevCount
                   );
                   setTotalSum((prevSum) =>
-                    prevSum !== 0 ? prevSum - xx59.price : prevSum
+                    prevSum !== 0 ? prevSum - xx99.price : prevSum
                   );
                 }}
               >
@@ -70,7 +70,7 @@ const Xx99MarkTwo = () => {
               <button
                 onClick={() => {
                   setCounter((prevCount) => prevCount + 1);
-                  setTotalSum((prevSum) => parseInt(prevSum) + xx59.price);
+                  setTotalSum((prevSum) => parseInt(prevSum) + xx99.price);
                 }}
               >
                 +
@@ -83,14 +83,14 @@ const Xx99MarkTwo = () => {
       <Features>
         <div>
           <h1>features</h1>
-          <p>{xx59.features}</p>
+          <p>{xx99.features}</p>
           <br />
-          <p>{xx59.feature2}</p>
+          <p>{xx99.feature2}</p>
         </div>
         <div>
           <h1>in the box</h1>
           <div>
-            {xx59.inTheBox.map((item) => (
+            {xx99.inTheBox.map((item) => (
               <p>
                 <span>{`${item.amount}x`}</span> {item.name}
               </p>
@@ -101,43 +101,43 @@ const Xx99MarkTwo = () => {
       <Gallery>
         <picture className="a">
           <source
-            srcset={`./assets/${xx59.gallery.first.mobile}`}
+            srcset={`./assets/${xx99.gallery.first.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.first.tablet}`}
+            srcset={`./assets/${xx99.gallery.first.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.first.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99.gallery.first.desktop}`} alt="" />
         </picture>
         <picture className="b">
           <source
-            srcset={`./assets/${xx59.gallery.second.mobile}`}
+            srcset={`./assets/${xx99.gallery.second.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.second.tablet}`}
+            srcset={`./assets/${xx99.gallery.second.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.second.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99.gallery.second.desktop}`} alt="" />
         </picture>
         <picture className="c">
           <source
-            srcset={`./assets/${xx59.gallery.third.mobile}`}
+            srcset={`./assets/${xx99.gallery.third.mobile}`}
             media="(max-width: 395px)"
           />
           <source
-            srcset={`./assets/${xx59.gallery.third.tablet}`}
+            srcset={`./assets/${xx99.gallery.third.tablet}`}
             media="(max-width: 768px)"
           />
-          <img srcset={`./assets/${xx59.gallery.third.desktop}`} alt="" />
+          <img srcset={`./assets/${xx99.gallery.third.desktop}`} alt="" />
         </picture>
       </Gallery>
       <OtherItems>
         <h1>you may also like</h1>
         <div>
           {others.map((item) => (
-            <Others {...item} />
+           <Others {...item} />
           ))}
         </div>
       </OtherItems>

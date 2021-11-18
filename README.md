@@ -51,7 +51,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://uz-audiophile.netlify.app/)
 
 ## My process
 
@@ -107,9 +107,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@davlatshermatov](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Telegram - [@davlat_shermatov](https://t.me/davlat_shermatov)
+- Frontend Mentor - [@davlatshermatov](https://www.frontendmentor.io/profile/davlatshermatov)
+- Facebook - [@davlatshermatov](https://www.facebook.com/davlatshermatov111/)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 

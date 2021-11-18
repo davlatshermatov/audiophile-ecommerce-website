@@ -4,11 +4,13 @@ import Home from "./pages/home/Home";
 import { AppStyled } from "./AppStyle";
 import Speakers from "./pages/speakers/Speakers";
 import Earphones from "./pages/earphones/Earphones";
-import Footer from "./components/footer/Footer";
-import About from "./components/about/About";
-import Menu from "./components/home-menu/Menu";
-import Xx99MarkTwo from "./pages/xx99-mark-two/Xx99MarkTwo";
-import NotFound from "./pages/not-found/NotFound"
+import NotFound from "./pages/not-found/NotFound";
+import Xx99Two from "./pages/xx99Two/Xx99Two";
+import Xx99One from "./pages/xx99One/Xx99One.jsx";
+import Xx59 from "./pages/xx59/Xx59.jsx";
+import Zx9 from "./pages/zx9/Zx9.jsx";
+import Zx7 from "./pages/zx7/Zx7.jsx";
+import Yx1 from "./pages/yx1/Yx1.jsx";
 
 function App() {
   return (
@@ -19,11 +21,12 @@ function App() {
           <Route exact path="/headphones" component={Headphones} />
           <Route exact path="/speakers" component={Speakers} />
           <Route exact path="/earphones" component={Earphones} />
-          {/* <Route exact path="/headphones/xx99two" component={Xx99MarkTwo} /> */}
-          {/* <Route exact path="/headphones/xx99one" />
-          <Route exact path="/headphones/xx59" />
-          <Route exact path="/speakers/" />
-          <Route exact path="/earphones/" /> */}
+          <Route exact path="/headphones/xx99two" component={Xx99Two} />
+          <Route exact path="/headphones/xx99one" component={Xx99One} />
+          <Route exact path="/headphones/xx59" component={Xx59} />
+          <Route exact path="/speakers/zx9" component={Zx9} />
+          <Route exact path="/speakers/zx7" component={Zx7} />
+          <Route exact path="/earphones/yx1" component={Yx1} />
           <Route component={NotFound} />
         </Switch>
       </AppStyled>

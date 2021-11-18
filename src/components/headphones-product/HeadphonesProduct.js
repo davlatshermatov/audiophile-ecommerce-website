@@ -6,14 +6,14 @@ import {
   ProductTitle,
   ProductDetails,
   ProductDesc,
-    } from "./HeadphonesProductStyle";
+} from "./HeadphonesProductStyle";
 
-
-const HeadphonesProduct = ({ name, img, desc, order }) => {
+const HeadphonesProduct = ({ name, img, desc, order, link }) => {
   return (
     <HeadphonesProductStyled>
       <Image>
-       ` <picture>
+        `{" "}
+        <picture>
           <source
             srcset={`./assets/${img.mobile}`}
             media="(max-width: 395px)"
@@ -24,7 +24,8 @@ const HeadphonesProduct = ({ name, img, desc, order }) => {
           />
 
           <img srcset={`./assets/${img.desktop}`} alt="" />
-        </picture>`
+        </picture>
+        `
       </Image>
       <ProductDetails order={order}>
         <p>new product</p>
@@ -34,7 +35,18 @@ const HeadphonesProduct = ({ name, img, desc, order }) => {
         <ProductDesc>
           <p>{desc}</p>
         </ProductDesc>
-        <Button className="btn">see product</Button>
+        <Button
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          to={link}
+          className="btn"
+        >
+          see product
+        </Button>
       </ProductDetails>
     </HeadphonesProductStyled>
   );

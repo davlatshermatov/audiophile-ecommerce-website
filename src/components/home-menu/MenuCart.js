@@ -11,7 +11,15 @@ const MenuCart = ({ img, productName, url }) => {
     <MenuCartStyled>
       <CartBodyStyled>
         <p>{productName}</p>
-        <Details to={url}>
+        <Details
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          to={url}
+        >
           <p>Shop</p>
           <img
             src="./assets/shared/desktop/icon-arrow-right.svg"
