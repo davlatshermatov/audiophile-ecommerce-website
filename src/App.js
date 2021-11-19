@@ -11,25 +11,29 @@ import Xx59 from "./pages/xx59/Xx59.jsx";
 import Zx9 from "./pages/zx9/Zx9.jsx";
 import Zx7 from "./pages/zx7/Zx7.jsx";
 import Yx1 from "./pages/yx1/Yx1.jsx";
+import 'react-toastify/dist/ReactToastify.css';
+import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
     <BrowserRouter>
-      <AppStyled>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/headphones" component={Headphones} />
-          <Route exact path="/speakers" component={Speakers} />
-          <Route exact path="/earphones" component={Earphones} />
-          <Route exact path="/headphones/xx99two" component={Xx99Two} />
-          <Route exact path="/headphones/xx99one" component={Xx99One} />
-          <Route exact path="/headphones/xx59" component={Xx59} />
-          <Route exact path="/speakers/zx9" component={Zx9} />
-          <Route exact path="/speakers/zx7" component={Zx7} />
-          <Route exact path="/earphones/yx1" component={Yx1} />
-          <Route component={NotFound} />
-        </Switch>
-      </AppStyled>
+      <CartProvider>
+        <AppStyled>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/headphones" component={Headphones} />
+            <Route exact path="/speakers" component={Speakers} />
+            <Route exact path="/earphones" component={Earphones} />
+            <Route exact path="/headphones/xx99two" component={Xx99Two} />
+            <Route exact path="/headphones/xx99one" component={Xx99One} />
+            <Route exact path="/headphones/xx59" component={Xx59} />
+            <Route exact path="/speakers/zx9" component={Zx9} />
+            <Route exact path="/speakers/zx7" component={Zx7} />
+            <Route exact path="/earphones/yx1" component={Yx1} />
+            <Route component={NotFound} />
+          </Switch>
+        </AppStyled>
+      </CartProvider>
     </BrowserRouter>
   );
 }

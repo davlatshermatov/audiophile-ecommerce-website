@@ -14,7 +14,6 @@ const Home = () => {
       <HomeBanner />
       <Menu />
       <ProductPreview />
-      <Menu />
       <About />
       <Footer />
     </HomeStyled>

@@ -1,5 +1,7 @@
 export const yx1 = {
+  id:4,
   name: "yx1 wireless earphones",
+  cartName: "yx1",
   desc: `Tailor your listening experience with bespoke dynamic drivers from
    the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments 
    with its active noise cancellation feature.`,
@@ -8,6 +10,7 @@ export const yx1 = {
     tablet: "product-yx1-earphones/tablet/image-product.jpg",
     desktop: "product-yx1-earphones/desktop/image-product.jpg",
   },
+  cartImg:"./assets/cart/image-yx1-earphones.jpg",
   price: 599,
   features: `Experience unrivalled stereo sound thanks to innovative acoustic technology.
    With improved ergonomics designed for full day wearing, these revolutionary earphones have 

@@ -1,5 +1,7 @@
 export const xx59 = {
+  id: 6,
   name: "xx59 headphones",
+  cartName: "xx59",
   desc: `Enjoy your audio almost anywhere and customize it to your specific tastes 
          with the XX59 headphones. The stylish yet durable versatile wireless headset is a
          brilliant companion at home or on the move.`,
@@ -8,6 +10,7 @@ export const xx59 = {
     tablet: "product-xx59-headphones/tablet/image-product.jpg",
     desktop: "product-xx59-headphones/desktop/image-product.jpg",
   },
+  cartImg: "./assets/cart/image-xx59-headphones.jpg",
   price: 899,
   features: `These headphones have been created from durable, high-quality materials tough
    enough to take anywhere. Its compact folding design fuses comfort and minimalist style 
@@ -53,7 +56,7 @@ export const xx59 = {
       desktop: "product-xx59-headphones/desktop/image-gallery-3.jpg",
     },
   },
-  new: true,
+  new: false,
 };
 
 export const others = [

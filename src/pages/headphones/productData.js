@@ -12,6 +12,7 @@ const headphones = [
         "product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg",
     },
     link: "headphones/xx99Two",
+    isNew:true,
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const headphones = [
         "product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
     },
     link: "headphones/xx99One",
+    isNew:false,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const headphones = [
       mobile: "product-xx59-headphones/mobile/image-category-page-preview.jpg",
     },
     link: "headphones/xx59",
+    isNew:false,
   },
 ];
 

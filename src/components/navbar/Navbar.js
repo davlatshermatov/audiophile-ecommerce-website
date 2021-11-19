@@ -1,18 +1,24 @@
 import React, { useState } from "react";
+import Cart from "../cart/Cart";
 import { Nav, NavLink, NavLogo, NavMenu, NavBtn } from "./NavbarElements";
 
-const Navbar = ({background}) => {
+const Navbar = ({ background }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   return (
     <>
       <Nav background={background}>
         <div
           className={`menuBtn ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+            setCartOpen(false);
+          }}
         >
           <div className="menuBtn-burger"></div>
         </div>
+        {cartOpen ? <Cart /> : ""}
         <NavLogo to="/">
           <img src="./assets/shared/desktop/logo.svg" alt="NavLogo" />
         </NavLogo>
@@ -22,9 +28,10 @@ const Navbar = ({background}) => {
           <NavLink to="/speakers">Speakers</NavLink>
           <NavLink to="/earphones">Earphones</NavLink>
         </NavMenu>
-        <NavBtn>
+        <NavBtn onClick={() => setCartOpen(!cartOpen)}>
           <img src="./assets/shared/desktop/icon-cart.svg" alt="cart-icon" />
         </NavBtn>
+        <div className="layer"></div>
       </Nav>
     </>
   );

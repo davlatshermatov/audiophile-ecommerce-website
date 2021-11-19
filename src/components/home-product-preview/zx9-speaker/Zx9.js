@@ -10,6 +10,13 @@ import {
 } from "./Zx9Styled";
 
 const Zx9 = () => {
+  const toTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Zx9Styled>
       <Box>
@@ -37,7 +44,9 @@ const Zx9 = () => {
               truly remarkable sound.
             </p>
           </ProductDescription>
-          <Button to="/">see product</Button>
+          <Button to="/speakers/zx9" onClick={toTop}>
+            see product
+          </Button>
         </ProductDetails>
       </Box>
     </Zx9Styled>

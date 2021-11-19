@@ -130,12 +130,17 @@ export const Features = styled.div`
 
   p {
     font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
 
     span {
       color: #d87d4a;
       font-weight: 700;
       margin-right: 1rem;
     }
+  }
+
+  div div p {
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 768px) {

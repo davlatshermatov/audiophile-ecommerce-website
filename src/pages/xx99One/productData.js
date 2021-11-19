@@ -1,5 +1,7 @@
 export const xx99One = {
+  id:5,
   name: "xx99 mark | headphones",
+  cartName: "xx99 mk |",
   desc: `As the gold standard for headphones, the classic XX99 Mark I offers detailed 
          and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados
          alike in studios and on the go. `,
@@ -8,6 +10,7 @@ export const xx99One = {
     tablet: "product-xx99-mark-one-headphones/tablet/image-product.jpg",
     desktop: "product-xx99-mark-one-headphones/desktop/image-product.jpg",
   },
+  cartImg:"./assets/cart/image-xx99-mark-one-headphones.jpg",
   price: 1750,
   features: `As the headphones all others are measured against, the XX99 Mark I demonstrates
      over five decades of audio expertise, redefining the critical listening experience. 
@@ -62,7 +65,7 @@ export const xx99One = {
         "product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg",
     },
   },
-  new: true,
+  new: false,
 };
 
 export const others = [
@@ -73,7 +76,7 @@ export const others = [
       tablet: "./assets/shared/tablet/image-xx99-mark-two-headphones.jpg",
       desktop: "./assets/shared/desktop/image-xx99-mark-two-headphones.jpg",
     },
-    link: "xx99two",
+    link: "/headphones/xx99two",
   },
   {
     name: "xx59",
@@ -82,7 +85,7 @@ export const others = [
       tablet: "./assets/shared/tablet/image-xx59-headphones.jpg",
       desktop: "./assets/shared/desktop/image-xx59-headphones.jpg",
     },
-    link: "xx59",
+    link: "/headphones/xx59",
   },
   {
     name: "zx9 speaker",
@@ -91,6 +94,6 @@ export const others = [
       tablet: "./assets/shared/tablet/image-zx9-speaker.jpg",
       desktop: "./assets/shared/desktop/image-zx9-speaker.jpg",
     },
-    link: "zx9",
+    link: "/speakers/zx9",
   },
 ];

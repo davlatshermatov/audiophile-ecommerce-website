@@ -1,5 +1,7 @@
 export const zx7 = {
+  id:3,
   name: "zx7 speaker",
+  cartName:"zx7",
   desc: `Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker
      uses high-end audiophile components that represents the top of the line powered speakers 
      for home or studio use.`,
@@ -8,6 +10,7 @@ export const zx7 = {
     tablet: "product-zx7-speaker/tablet/image-product.jpg",
     desktop: "product-zx7-speaker/desktop/image-product.jpg",
   },
+  cartImg:"./assets/cart/image-zx7-speaker.jpg",
   price: 3500,
   features: `Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response
    rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide.

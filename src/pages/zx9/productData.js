@@ -1,5 +1,7 @@
 export const zx9 = {
+  id:2,
   name: "zx9 speaker",
+  cartName:"zx9",
   desc: `Upgrade your sound system with the all new ZX9 active speaker. It’s a 
     bookshelf speaker system that offers truly wireless connectivity -- creating new 
     possibilities for more pleasing and practical audio setups.`,
@@ -8,6 +10,7 @@ export const zx9 = {
     tablet: "product-zx9-speaker/tablet/image-product.jpg",
     desktop: "product-zx9-speaker/desktop/image-product.jpg",
   },
+  cartImg:"./assets/cart/image-zx9-speaker.jpg",
   price: 4500,
   features: `Connect via Bluetooth or nearly any wired source. This speaker features optical,
    digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to

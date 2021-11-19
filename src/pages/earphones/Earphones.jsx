@@ -18,6 +18,7 @@ const Earphones = () => {
       mobile: "product-yx1-earphones/mobile/image-category-page-preview.jpg",
     },
     link: "/earphones/yx1",
+    isNew: true,
   };
 
   return (

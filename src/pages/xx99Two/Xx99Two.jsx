@@ -19,11 +19,30 @@ import {
 } from "./Xx99TwoStyle";
 import Navbar from "../../components/navbar/Navbar";
 import { xx99, others } from "./productData";
-import Others from "../../components/others/Others"
+import Others from "../../components/others/Others";
+import { useCart } from "react-use-cart";
+import { ToastContainer, toast } from "react-toastify";
 
 const Xx99MarkTwo = () => {
   const [counter, setCounter] = useState(1);
   const [totalSum, setTotalSum] = useState(xx99.price);
+
+  const { addItem } = useCart();
+
+  const handleClick = () => {
+    addItem(xx99, counter);
+    toast.success("Successfully added", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setCounter(1);
+    setTotalSum(xx99.price);
+  };
 
   return (
     <>
@@ -76,7 +95,7 @@ const Xx99MarkTwo = () => {
                 +
               </button>
             </Counter>
-            <Button>add to cart</Button>
+            <Button onClick={handleClick}>add to cart</Button>
           </AddToCart>
         </ProductDetails>
       </Xx99TwoStyled>
@@ -92,7 +111,8 @@ const Xx99MarkTwo = () => {
           <div>
             {xx99.inTheBox.map((item) => (
               <p>
-                <span>{`${item.amount}x`}</span> {item.name}
+                <span>{`${item.amount}x`}</span>
+                {item.name}
               </p>
             ))}
           </div>
@@ -137,13 +157,24 @@ const Xx99MarkTwo = () => {
         <h1>you may also like</h1>
         <div>
           {others.map((item) => (
-           <Others {...item} />
+            <Others {...item} />
           ))}
         </div>
       </OtherItems>
       <Menu />
       <About />
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

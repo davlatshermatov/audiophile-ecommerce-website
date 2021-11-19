@@ -109,9 +109,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Telegram - [@davlat_shermatov](https://t.me/davlat_shermatov){:target="\_blank"}
-- Frontend Mentor - [@davlatshermatov](https://www.frontendmentor.io/profile/davlatshermatov){:target="\_blank"}
-- Facebook - [@davlatshermatov](https://www.facebook.com/davlatshermatov111/){:target="\_blank"}
+- Telegram - [@davlat_shermatov](https://t.me/davlat_shermatov){target="\_blank"}
+- Frontend Mentor - [@davlatshermatov](https://www.frontendmentor.io/profile/davlatshermatov){target="\_blank"}
+- Facebook - [@davlatshermatov](https://www.facebook.com/davlatshermatov111/){target="\_blank"}
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 

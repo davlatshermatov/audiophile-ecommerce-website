@@ -20,10 +20,29 @@ import {
 import Navbar from "../../components/navbar/Navbar";
 import { zx7, others } from "./productData";
 import Others from "../../components/others/Others";
+import { useCart } from "react-use-cart";
+import { ToastContainer, toast } from "react-toastify";
 
 const Xx99MarkTwo = () => {
   const [counter, setCounter] = useState(1);
   const [totalSum, setTotalSum] = useState(zx7.price);
+
+  const { addItem } = useCart();
+
+  const handleClick = () => {
+    addItem(zx7, counter);
+    toast.success("Successfully added", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setCounter(1);
+    setTotalSum(zx7.price);
+  };
 
   return (
     <>
@@ -76,7 +95,7 @@ const Xx99MarkTwo = () => {
                 +
               </button>
             </Counter>
-            <Button>add to cart</Button>
+            <Button onClick={handleClick}>add to cart</Button>
           </AddToCart>
         </ProductDetails>
       </Xx99TwoStyled>
@@ -144,6 +163,17 @@ const Xx99MarkTwo = () => {
       <Menu />
       <About />
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

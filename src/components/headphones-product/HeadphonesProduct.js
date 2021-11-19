@@ -8,7 +8,7 @@ import {
   ProductDesc,
 } from "./HeadphonesProductStyle";
 
-const HeadphonesProduct = ({ name, img, desc, order, link }) => {
+const HeadphonesProduct = ({ name, img, desc, order, link, isNew }) => {
   return (
     <HeadphonesProductStyled>
       <Image>
@@ -28,7 +28,7 @@ const HeadphonesProduct = ({ name, img, desc, order, link }) => {
         `
       </Image>
       <ProductDetails order={order}>
-        <p>new product</p>
+        {isNew ? <p>new product</p> : ""}
         <ProductTitle>
           <h1>{name}</h1>
         </ProductTitle>
