@@ -11,8 +11,9 @@ import Xx59 from "./pages/xx59/Xx59.jsx";
 import Zx9 from "./pages/zx9/Zx9.jsx";
 import Zx7 from "./pages/zx7/Zx7.jsx";
 import Yx1 from "./pages/yx1/Yx1.jsx";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { CartProvider } from "react-use-cart";
+import Checkout from "./pages/checkout/Checkout";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/speakers/zx9" component={Zx9} />
             <Route exact path="/speakers/zx7" component={Zx7} />
             <Route exact path="/earphones/yx1" component={Yx1} />
+            <Route exact path="/checkout" component={Checkout} />
             <Route component={NotFound} />
           </Switch>
         </AppStyled>

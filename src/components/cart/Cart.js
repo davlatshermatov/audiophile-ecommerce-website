@@ -53,7 +53,7 @@ const Cart = () => {
             <p>total</p>
             <span>$ {cartTotal}</span>
           </Total>
-          <Checkout>checkout</Checkout>
+          <Checkout to="/checkout">checkout</Checkout>
         </>
       )}
     </CartStyled>
