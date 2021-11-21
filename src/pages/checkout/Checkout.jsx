@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CheckoutStyled,
   CheckoutLeftStyled,
@@ -14,6 +14,10 @@ import {
 } from "./CheckoutStyle";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import { useCart } from "react-use-cart";
+import Modal from "../../components/modal/Modal";
+import useForm from "./useForm";
+import validate from "./validateInfo";
 
 const Checkout = () => {
   return (
@@ -25,18 +29,37 @@ const Checkout = () => {
         <CheckoutLeft />
         <Summary />
       </Container>
+
       <Footer />
     </CheckoutStyled>
   );
 };
 
 const CheckoutLeft = () => {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    zipCode: "",
+    city: "",
+    country: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
   const [isChecked, setIsChecked] = useState(true);
 
   return (
     <CheckoutLeftStyled>
       <h1>checkout</h1>
-      <form action="#">
+      <form>
         <p>billing details</p>
         <BillingDetails>
           <div>
@@ -46,6 +69,8 @@ const CheckoutLeft = () => {
               id="name"
               name="name"
               placeholder="Alexei Ward"
+              value={values.name}
+              onChange={handleChange}
             />
           </div>
           <div>
@@ -55,6 +80,8 @@ const CheckoutLeft = () => {
               id="email"
               name="email"
               placeholder="alexei@mail.com"
+              value={values.email}
+              onChange={handleChange}
             />
           </div>
           <div>
@@ -64,6 +91,8 @@ const CheckoutLeft = () => {
               id="phoneNumber"
               name="phoneNumber"
               placeholder="+1 202-555-0136"
+              value={values.phoneNumber}
+              onChange={handleChange}
             />
           </div>
         </BillingDetails>
@@ -75,8 +104,10 @@ const CheckoutLeft = () => {
             <input
               type="text"
               id="address"
-              name="adress"
+              name="address"
               placeholder="1137 Williams Avenue"
+              value={values.address}
+              onChange={handleChange}
             />
           </div>
           <div className="zip">
@@ -86,11 +117,20 @@ const CheckoutLeft = () => {
               id="zipCode"
               name="zipCode"
               placeholder="10001"
+              value={values.zipCode}
+              onChange={handleChange}
             />
           </div>
           <div className="city">
             <label htmlFor="city">City</label>
-            <input type="text" id="city" name="city" placeholder="New York" />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="New York"
+              value={values.city}
+              onChange={handleChange}
+            />
           </div>
           <div>
             <label htmlFor="country">Country</label>
@@ -99,6 +139,8 @@ const CheckoutLeft = () => {
               id="country"
               name="country"
               placeholder="United States"
+              value={values.country}
+              onChange={handleChange}
             />
           </div>
         </ShippingInfo>
@@ -179,43 +221,68 @@ const CheckoutLeft = () => {
 };
 
 const Summary = () => {
+  const { items, totalItems, cartTotal, totalUniqueItems, emptyCart } =
+    useCart();
+  const [shipping, setShipping] = useState(50);
+  const [vat, setVat] = useState(1079);
+  const [grandTotal, setGrandTotal] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    emptyCart();
+    setShowModal((prev) => !prev);
+  };
+
+  useEffect(() => {
+    setGrandTotal(cartTotal + shipping + vat);
+    console.log(showModal);
+  }, [items]);
+
   return (
     <SummaryStyled>
       <p>summary</p>
-      <SummaryProduct />
-      <SummaryProduct />
+
+      {items.map((item) => (
+        <SummaryProduct
+          img={item.cartImg}
+          name={item.cartName}
+          price={item.price}
+          quantity={item.quantity}
+        />
+      ))}
       <div className="info">
         <p>total</p>
-        <p>$ 5,396</p>
+        <p>$ {cartTotal}</p>
       </div>
       <div className="info">
         <p>shipping</p>
-        <p>$ 50</p>
+        <p>$ {shipping}</p>
       </div>
       <div className="info">
         <p>vat (included)</p>
-        <p>$ 1,079</p>
+        <p>$ {vat}</p>
       </div>
       <div className="info total">
         <p>grand total</p>
-        <p>$ 5,446</p>
+        <p>$ {grandTotal}</p>
       </div>
-      <button>continue</button>
+      <button onClick={openModal}>continue</button>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
     </SummaryStyled>
   );
 };
 
-const SummaryProduct = () => {
+const SummaryProduct = ({ img, name, price, quantity }) => {
   return (
     <SummaryProductStyled>
       <div className="image">
-        <img src="./assets/cart/image-xx99-mark-two-headphones.jpg" alt="" />
+        <img src={img} alt="" />
         <div>
-          <p>xx99 mk ||</p>
-          <span> $ 2,999 </span>
+          <p>{name}</p>
+          <span> $ {price} </span>
         </div>
       </div>
-      <div className="quantity">x1</div>
+      <div className="quantity">x{quantity}</div>
     </SummaryProductStyled>
   );
 };

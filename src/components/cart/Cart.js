@@ -14,11 +14,8 @@ const Cart = () => {
     isEmpty,
     emptyCart,
     items,
-    totalItems,
     cartTotal,
     totalUniqueItems,
-    // updateItemQuantity,
-    // removeItem,
   } = useCart();
 
   return (

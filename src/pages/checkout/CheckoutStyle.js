@@ -7,6 +7,7 @@ export const Nav = styled.div`
 
 export const CheckoutStyled = styled.div`
   background: #f2f2f2;
+  position: relative;
 `;
 
 export const Container = styled.div`
@@ -61,6 +62,10 @@ export const CheckoutLeftStyled = styled.div`
       border: 1px solid #cfcfcf;
       border-radius: 8px;
       padding: 24px 18px;
+    }
+
+    input:focus {
+      border: 1px solid #d87d4a;
     }
   }
 
@@ -222,8 +227,6 @@ export const CashOnDelivery = styled.div`
     color: rgba(0, 0, 0, 0.5);
   }
 `;
-
-export const Form = styled.div``;
 
 export const SummaryStyled = styled.div`
   background: #fff;
